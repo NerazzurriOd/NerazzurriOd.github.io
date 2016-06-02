@@ -59,12 +59,12 @@
 
 
 /*Прилипающее меню*/
-
 .stickytop {
     position:fixed;
-    top:0;
-    text-align: center;
-    background: rgba(86,86, 86, 0.3);
+    top: 0;
+    background: #010101;
+    width: 100%;
+
 }
 
 /* ABOUT*/
@@ -352,4 +352,42 @@ button.submit:active {
     -ms-box-shadow: 0 0 10px 5px #356b0b inset;
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
 
+}
+
+
+/* BACK TO TOP*/
+
+.back-to-top {
+    visibility: hidden;
+    background-color: #444;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 48px;
+    position: fixed;
+    bottom: 65px;
+    right: 35px;
+    z-index: 90;
+    cursor: pointer;
+    border-radius: 1px;
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+    transition: all .6s
+}
+
+.back-to-top .fa {
+    font-size: 18px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.back-to-top:hover {
+    background-color: #fc4f3f;
+    opacity: 1
+}
+
+.back-to-top.show {
+    visibility: visible;
+    bottom: 35px;
+    opacity: 1;
 }
