@@ -58,6 +58,15 @@
 }
 
 
+/*Прилипающее меню*/
+
+.stickytop {
+    position:fixed;
+    top:0;
+    text-align: center;
+    background: rgba(86,86, 86, 0.3);
+}
+
 /* ABOUT*/
 .about {
     background-color: #efefef;
@@ -216,24 +225,26 @@ body {
 *:focus {outline: none;}
 
 /* === ������ ��� ����� � ����� ������ === */
-body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
 .contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;}
 .form_hint, .required_notification {font-size: 11px;}
 
 .contact_form {
-    width:700px;
+    width: 50%;
+    max-width:700px;
 }
 
 /* === ������ ����� === */
 .contact_form p {
-    width:650px;
+    width: 80%;
+    max-width:650px;
     margin:7px 10px 7px 10px;
     padding:0px;
 }
 
 /* === ������ � ������������ ������ === */
 .contact_form label {
-    width:150px;
+    width: 30%;
+    max-width:150px;
     margin-top: 3px;
     display:inline-block;
     float:left;
@@ -241,10 +252,11 @@ body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", san
 }
 .contact_form input {
     height:20px;
-    width:220px;
+    width: 35%;
+    max-width:220px;
     padding:5px 8px;
 }
-.contact_form textarea {padding:8px; width:300px;}
+.contact_form textarea {padding:8px; width: 50%; max-width:300px;}
 .contact_form button {margin-left:156px;}
 
 /* ����� � ������� */

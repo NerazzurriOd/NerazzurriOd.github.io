@@ -25,7 +25,7 @@
             <h1 class="logo__text text__center">Nikolay Dynik</h1>
             <p class="logo__text">Highly Motivated Frontend Developer</p>
         </div>
-        <ul class="menu">
+        <ul class="menu stickytop">
             <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
             <li class="menu__item"><a href="#" class="menu__link">About Me</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
@@ -144,6 +144,17 @@
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/script.js"></script>
 
-
+<script>
+    $(function(){
+        $(window).scroll(function() {
+            if($(this).scrollTop() >= 690) {
+                $('.menu').addClass('stickytop');
+            }
+            else{
+                $('.menu').removeClass('stickytop');
+            }
+        });
+    });
+</script>
 </body>
 </html>
