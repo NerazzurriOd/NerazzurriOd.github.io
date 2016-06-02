@@ -31,22 +31,38 @@
             });
         });
     </script>
+
+    <!-- Плавный переход -->
+    <script>
+        $(document).ready(function(){
+            $(".menu").on("click","a", function (event) {
+
+                event.preventDefault();
+
+                var id  = $(this).attr('href'),
+
+                        top = $(id).offset().top;
+
+                $('body,html').animate({scrollTop: top}, 1500);
+            });
+        });
+    </script>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="header__logo">
             <p class="logo__text">The</p>
             <h1 class="logo__text text__center">Nikolay Dynik</h1>
             <p class="logo__text">Highly Motivated Frontend Developer</p>
         </div>
         <ul class="menu">
-            <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">About Me</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Contact Me</a></li>
+            <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="#about" class="menu__link">About Me</a></li>
+            <li class="menu__item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
+            <li class="menu__item"><a href="#contact" class="menu__link">Contact Me</a></li>
         </ul>
     </header>
-    <section class="about clearfix">
+    <section class="about clearfix" id="about">
         <div class="wrapper">
             <div class="about__me">
                 <p class="about__text text">Hello</p>
@@ -63,9 +79,9 @@
 
     <!-- PORTFOLIO -->
 
-    <section class="content">
-        <h2>My Portfolio</h2>
-        <p>Contact me if you like my work</p>
+    <section class="content" id="portfolio">
+        <h2 class="text">My Portfolio</h2>
+        <p class="text">Contact me if you like my work</p>
         <div class="item">
             <img class="picture" src="img/img_1.png" alt="picture1">
             <div class="icons">
@@ -121,40 +137,15 @@
     <!-- END PORTFOLIO -->
 
     <!-- CONTACT FORM -->
-    <section class="form">
-        <form class="contact_form" action="contact-form.php" method="post">
-            <p>
-                <label for="name">Your name:</label>
-                <input type="text"  name="name" placeholder="Enter your name" required />
-            </p>
-            <p>
-                <label for="email">Email:</label>
-                <input type="email" name="email" placeholder="Enter your email" required />
-                <span class="form_hint">Правильный формат "name@something.com"</span>
-            </p>
-            <p>
-                <label for="tel">Phone number:</label>
-                <input type="tel" name="tel" placeholder="Enter your phone number" required />
-                <span class="form_hint">Правильный формат "+7-123-4567890"</span>
-            </p>
-            <p>
-                <label for="website">Your website:</label>
-                <input type="url" name="website" placeholder="Enter your website" pattern="(http|https)://.+"/>
-                <span class="form_hint">Correct format "http://someaddress.com"</span>
-            </p>
-            <p>
-                <label for="message">Your message:</label>
-                <textarea name="message" cols="40" rows="6" required ></textarea>
-            </p>
-            <input name="bezspama" type="text" style="display:none" value="" />
-            <p>
-                <button class="submit" type="submit">Send message</button>
-            </p>
-        </form>
+    <section class="contact" id="contact">
 
     </section>
 
-    <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up' /></div>
+
+    <section class="footer">
+        <p class="footer__text"> All Rights Reserved @ Nikolay Dynik 2016</p>
+    </section>
+
 
 
 
