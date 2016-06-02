@@ -62,9 +62,9 @@
 .stickytop {
     position:fixed;
     top: 0;
-    background: #010101;
+    background: #2D3950;
     width: 100%;
-
+    z-index: 1;
 }
 
 /* ABOUT*/
@@ -119,7 +119,7 @@ img {
     min-width: 380px;
     max-width: 1280px;
     margin: 0 auto;
-    min-width: 260px;
+    padding-top: 100px;
 }
 .item {
     width: 360px;
