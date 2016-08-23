@@ -1,0 +1,81 @@
+	/* ==================== Responsive ======================= */
+
+@media (min-width: 1200px) {
+
+}
+
+
+/*Desktop Screen 1024px  */
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+.form-wrapper {
+  width: 75%;
+}
+
+}
+
+
+
+/* Tablet Layout: 768px.  */
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+.main-nav li a {
+  font-size: 11px;
+  padding: 16px 6px;
+}
+.navbar-collapse.collapse {
+  padding: 0;
+}
+.form-wrapper {
+  width: 95%;
+  padding:30px;
+  margin-top: 16vh;
+}
+
+}
+
+
+/* Mobile Layout: 480px.  */
+
+@media only screen and (max-width:767px) {
+.header-right {
+  float: none;
+  text-align: center;
+}
+.navbar-collapse {
+  background-color: #FAA83C;
+  margin:0 -25px;
+}
+.navbar-toggle .icon-bar {
+  background-color: #FAA83C;
+  height: 4px;
+  width: 30px;
+}
+.main-nav li a {
+  font-size: 18px;
+  padding: 10px 12px;
+}
+.form-wrapper {
+  margin-top: 10vh;
+  padding: 25px;
+  width: 90%;
+}
+.form_group input[type="text"] , .form_group .search_btn{
+  width: 100%;
+}
+.form_group .search_btn {
+  border-radius: 25px;
+  font-size: 16px;
+  height: 56px;
+  margin: 18px 0 0;
+}
+
+}
+
+
+/* Wide Mobile Layout: 320px.  */
+
+@media only screen and (max-width:479px) {
+
+}
+

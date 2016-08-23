@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var touch = $('#touch-menu');
+            var menu = $('.nav');
+
+            $(touch).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function(){
+                var wid = $(window).width();
+                if(wid > 760 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    <title>Menu</title>
+</head>
+<body>
+    <div class="container">
+        <a href="#" id="touch-menu">Меню</a>
+        <nav>
+            <ul class="nav clearfix">
+                <li><a href="#">Menu_1</a></li>
+                <li><a href="#">Menu_2</a></li>
+                <li><a href="#">Menu_3</a></li>
+                <li><a href="#">Menu_4</a></li>
+                <li><a href="#">Menu_5</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
