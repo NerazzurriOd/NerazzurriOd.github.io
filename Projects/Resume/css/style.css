@@ -43,7 +43,7 @@
 
 .about__my__img{
     width: 200px;
-    height: 200px;
+    height: auto;
     border-radius: 100px;
     margin-left: 22px;
 }
